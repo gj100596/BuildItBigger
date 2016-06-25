@@ -22,6 +22,10 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:23.2.1'
+
     // Added for AdMob
     compile 'com.google.android.gms:play-services:8.4.0'
+
+    //Add Java Lib Dependency
+    compile project(':javalib')
 }
