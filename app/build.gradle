@@ -21,6 +21,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    productFlavors {
+        free {
+            applicationId "com.udacity.gradle.builditbigger.free"
+        }
+        paid {
+            applicationId "com.udacity.gradle.builditbigger.paid"
+        }
+    }
 }
 
 dependencies {
@@ -35,12 +44,13 @@ dependencies {
     compile project(':androidlib')
 
     //ADD GCE
-    compile  'com.android.support:appcompat-v7:23.2.1'
-    compile  'com.google.android.gms:play-services:8.4.0'
-    compile  'com.google.code.findbugs:jsr305:2.0.1'
     compile project(path: ':backend', configuration: 'android-endpoints')
 
     // https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient
 //    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.0.1'
 
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile 'com.google.android.gms:play-services:8.4.0'
+    compile 'com.google.code.findbugs:jsr305:2.0.1'
+    compile 'com.android.support:support-v4:23.2.1'
 }
