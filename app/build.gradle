@@ -45,6 +45,8 @@ dependencies {
 
     //ADD GCE
     compile project(path: ':backend', configuration: 'android-endpoints')
+    freeCompile project(path: ':backend', configuration: 'android-endpoints')
+    paidCompile project(path: ':backend', configuration: 'android-endpoints')
 
     // https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient
 //    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.0.1'
